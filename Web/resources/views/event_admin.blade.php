@@ -9,18 +9,19 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
             <dialog id="my_modal_1" class="modal">
-              <form method="dialog" class="modal-box text-white">
+              <form action="/event/post"  method="POST" enctype="multipart/form-data" class="modal-box text-white">
+                @csrf
             <div class="form-control w-full">
               <label class="label">
                 <span class="label-text">Name Event</span>
               </label>
-              <input type="text" placeholder="Masukkan Name Event" class="input input-bordered w-full" />
+              <input type="text" id="name" name="name" placeholder="Masukkan Name Event" class="input input-bordered w-full" />
             </div>   
             <div class="form-control w-full">
               <label class="label">
                 <span class="label-text">Uraian</span>
               </label>
-              <input type="text" placeholder="Type here" class="input input-bordered w-full" />
+              <input type="text" id="uraian" placeholder="Type here" class="input input-bordered w-full" />
             </div>   
             <div class="form-control w-full">
               <label class="label">
@@ -48,7 +49,7 @@
             </div>   
              <div class="modal-action">
                   <button class="btn">Close</button>
-                  <button class="btn">Submit</button>
+                  <button type="submit" name="simpan" class="btn">Submit</button>
                 </div>
               </form>
             </dialog>
