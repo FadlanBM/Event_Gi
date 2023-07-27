@@ -52,4 +52,8 @@
             </div>
         </div>
     </div>
+
+    <div>
+        @include('components.natasha-sunny')
+    </div>
 @endsection
