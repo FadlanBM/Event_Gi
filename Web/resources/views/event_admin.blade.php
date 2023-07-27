@@ -13,7 +13,7 @@
                 @csrf
             <div class="form-control w-full">
               <label class="label">
-                <span class="label-text">Name Event</span>
+                <span class="label-text">Event name</span>
               </label>
               <input type="text" id="name" name="name" placeholder="Masukkan Name Event" class="input input-bordered w-full" />
             </div>   
@@ -61,32 +61,24 @@
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Event name</th>
+        <th>Uraian</th>
+        <th>Tujuan</th>
+        <th>Url</th>
+        <th>Tanggal</th>
+        <th>Waktu</th>
       </tr>
     </thead>
     <tbody>
       <!-- row 1 -->
       <tr>
         <th>1</th>
-        <td>Cy Ganderton</td>
+        <td>Anime</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
-      </tr>
-      <!-- row 2 -->
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      <!-- row 3 -->
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
+        <td>Blue</td>
+        <td>Blue</td>
+        <td>Blue</td>
       </tr>
     </tbody>
   </table>
