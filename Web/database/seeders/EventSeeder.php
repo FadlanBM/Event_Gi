@@ -12,6 +12,12 @@ class EventSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        // DB::table('events')->insert([
+        //     'name' => Str::random(5),
+        //     'uraian' => Str::random(5),
+        //     'tujuan' => Str::random(5),
+        //     'tanggal' => Str::random(5),
+        //     'waktu' => Str::random(5)
+        // ]);
     }
 }

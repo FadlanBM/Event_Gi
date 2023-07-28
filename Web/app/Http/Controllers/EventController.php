@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\event;
+use Illuminate\Http\Request;
+// use App\User;
 use App\Http\Requests\StoreeventRequest;
 use App\Http\Requests\UpdateeventRequest;
 use Illuminate\Support\Facades\Session;
@@ -14,7 +16,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('event_admin');
+        return view('event.index',[
+            'event'=>Event::all()
+        ]);
     }
 
     /**
@@ -22,7 +26,9 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('event.create',[
+            
+        ]);
     }
 
     /**
@@ -30,41 +36,18 @@ class EventController extends Controller
      */
     public function store(StoreeventRequest $request)
     {
-        Session::flash('name',$request->name);
-        Session::flash('uraian',$request->uraian);
-        Session::flash('tujuan',$request->tujuan);
-        Session::flash('tanggal',$request->tanggal);
-        Session::flash('waktu',$request->waktu);
-        $request->validate(
-            [
-                'name'=>'required',
-                'uraian'=>'required',
-                'tujuan'=>'required',
-                'tanggal'=>'reqired',
-                'waktu'=>'required'
-            ],[
-               'name.required'=>'From Nama Harus di isi', 
-               'uraian.required'=>'From Nama Harus di isi', 
-               'tujuan.required'=>'From Nama Harus di isi', 
-               'tanggal.required'=>'From Nama Harus di isi', 
-               'waktu.required'=>'From Nama Harus di isi', 
-            ]
-            );
+        $request->validate([
+            'name' => 'required',
+            'uraian' => 'required',
+            'tujuan' => 'required',
+            'tanggal' => 'required|date',
+            'waktu' => 'required|date_format:H:i',
+        ]);
 
-            $data=[
-                'users_id'=>auth()->user()->id,
-                'name'=>$request->name,
-                'uraian'=>$request->uraian,
-                'tujuan'=>$request->tujuan,
-                'tanggal'=>$request->tanggal,
-                'waktu'=>$request->waktu,
-                'link_meet'=>$request->link_meet,
-                'IsActive'=>1,
-                'verified'=>0,
-            ];
+        Event::create($request->all());
 
-            event::create($data);
-            return redirect()->route('event.index')->with('success','Berhasil Menyimpan data');
+        return redirect()->route('event.index')
+        ->with('success', 'Event created successfully.');
     }
 
     /**

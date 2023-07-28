@@ -25,12 +25,12 @@ Route::get('/welcome', function () {
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/event',[EventController::class,'index'])->middleware(['auth', 'verified'])->name('event');
-// Route::resource('/event',[EventController::class]);
-Route::post('/event/post',[EventController::class,'store'])->middleware(['auth', 'verified'])->name('event');
+Route::get('/admin', function () {
+    return view('admin');
+})->middleware(['auth', 'verified'])->name('admin');
+Route::resource('/event', EventController::class);
+// Route::get('/event',[EventController::class,'index'])->middleware(['auth', 'verified'])->name('event');
+// Route::post('/event/post',[EventController::class,'store'])->middleware(['auth', 'verified'])->name('event');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
