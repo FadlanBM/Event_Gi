@@ -53,7 +53,15 @@
         </div>
     </div>
 
-    <div>
-        @include('components.natasha-sunny')
+    <div class="bg-white w-full h-[1066px]">
+        <div class="flex gap-x-4">
+            @include('components.natasha-sunny')
+            <div class="flex flex-col gap-y-4">
+                @include('components.sunny-marwah')
+                @include('components.syarifah-hinata')
+                @include('components.helen-mentari')
+            </div>
+            @include('components.chat-box')
+        </div>
     </div>
 @endsection
