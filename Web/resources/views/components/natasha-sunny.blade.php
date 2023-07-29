@@ -1,7 +1,7 @@
 <div class="bg-[url('../../public/assets/natashasunny.png')] h-[500px] w-[500px]">
     <div class="flex flex-col h-[500px] w-[500px]">
-        <div class="flex">
-            <div class="pt-[16px] pl-[16px]">
+        <div class="flex justify-between">
+            <div class="flex justify-start pt-[16px] px-[16px]">
                 <div
                     class="bg-white/30 w-[151px] flex items-center h-[40px] px-2 gap-x-2.5 rounded-[100px] backdrop-blur-lg">
                     <img src="/assets/natashaavatar.png" class="rounded-full" />
@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-            <div class="pl-[284px] pt-[24px]">
+            <div class="flex justify-end py-[24px] px-[24px]">
                 <div class="bg-[#6673EA] w-[24px] h-[24px] rounded-full flex items-center justify-center">
                     <img src="/assets/icon-pin.svg" />
                 </div>
