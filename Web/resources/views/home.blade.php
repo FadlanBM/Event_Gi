@@ -5,7 +5,7 @@
         <div class="pt-[3rem]">
             <h1 class="xl:text-[4rem] xl:leading-[4.9rem] text-white font-semibold">
                 Reliable, secure
-                <img class="inline align-top" src="{{asset('assets/Ornament.svg')}}"/>
+                <img class="inline align-top" src="{{ asset('assets/Ornament.svg') }}" />
                 <br />
                 conference to get
                 <br />
@@ -17,20 +17,41 @@
                 <br />
                 product , create opportunity
             </p>
-            <button class="w-[198px] h-[50px] mt-9 text-white font-medium rounded-md bg-[#E14817]">
-                Join A Meeting
-            </button>
+            <!-- You can open the modal using ID.showModal() method -->
+            <button class="mt-8 text-white w-[170px] rounded-lg h-[50px] bg-[#E14817]" onclick="my_modal_4.showModal()">Join A Meeting</button>
+            <dialog id="my_modal_4" class="modal">
+                <form method="dialog" class="modal-box bg-white h-screen max-w-5xl">
+                    <h3 class="font-bold text-lg">Hello!</h3>
+                    <p class="py-4">Click the button below to close</p>
+                    <form action="">
+                        <label for="">Nama</label><br>
+                        <input type="text" name="" id=""><br>
+                        <label for="">Uraian</label><br>
+                        <input type="text" name="" id=""><br>
+                        <label for="">Tujuan</label><br>
+                        <input type="text" name="" id=""><br>
+                        <label for="">Tanggal</label><br>
+                        <input type="date" name="" id=""><br>
+                        <label for="">Waktu</label><br>
+                        <input type="text" name="" id="">
+                    </form>
+                    <div class="modal-action">
+                        <!-- if there is a button, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
         </div>
 
         <div>
-            <img class="ml-[6.9rem]" src="{{asset('assets/home.png')}}" />
+            <img class="ml-[6.9rem]" src="{{ asset('assets/home.png') }}" />
         </div>
     </div>
 
     <div class="bg-[#F8F8F8] h-[589px] flex justify-center items-center">
         <div class="flex items-center gap-x-[3.8rem]">
             <div>
-                <img src="{{asset('assets/Assets.png')}}" />
+                <img src="{{ asset('assets/Assets.png') }}" />
             </div>
 
             <div>
