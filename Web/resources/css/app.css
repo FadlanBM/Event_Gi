@@ -3,11 +3,5 @@
 @tailwind utilities;
 
 @layer components {
-    input:focus {
-        outline-width: 4px !important;
-        outline-color: #e14817 !important;
-        box-shadow: none !important;
-        -moz-box-shadow: none !important;
-        -webkit-box-shadow: none !important;
-    }
+    
 }

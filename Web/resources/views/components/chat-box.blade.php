@@ -104,6 +104,7 @@
                     </div>
                 </div>
             </div>
+            <div class="w-full h-[0.5px] bg-[#CFCFD1] mt-[12px]"></div>
 
         </div>
 

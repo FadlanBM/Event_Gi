@@ -18,11 +18,11 @@
                 product , create opportunity
             </p>
             <!-- You can open the modal using ID.showModal() method -->
-            <button class="mt-8 text-white w-[170px] rounded-lg h-[50px] bg-[#E14817]" onclick="my_modal_4.showModal()">Join A Meeting</button>
-            <dialog id="my_modal_4" class="modal">
-                <form method="dialog" class="modal-box bg-white h-screen max-w-5xl">
+            <button class="bg-[#E14817] h-[50px] w-[150px] text-white rounded-lg mt-8" onclick="my_modal_3.showModal()">Join Meeting</button>
+            <dialog id="my_modal_3" class="modal">
+                <form method="dialog" class="modal-box">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     <h3 class="font-bold text-lg">Hello!</h3>
-                    <p class="py-4">Click the button below to close</p>
                     <form action="">
                         <label for="">Nama</label><br>
                         <input type="text" name="" id=""><br>
@@ -33,12 +33,8 @@
                         <label for="">Tanggal</label><br>
                         <input type="date" name="" id=""><br>
                         <label for="">Waktu</label><br>
-                        <input type="text" name="" id="">
+                        <input type="time" name="" id=""><br>
                     </form>
-                    <div class="modal-action">
-                        <!-- if there is a button, it will close the modal -->
-                        <button class="btn">Close</button>
-                    </div>
                 </form>
             </dialog>
         </div>
