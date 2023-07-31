@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\event;
 use Illuminate\Http\Request;
-// use App\User;
+use App\User;
 use App\Http\Requests\StoreeventRequest;
 use App\Http\Requests\UpdateeventRequest;
 use Illuminate\Support\Facades\Session;
@@ -26,9 +26,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('event.create',[
-            
-        ]);
+        return view('event.create');
     }
 
     /**
@@ -36,18 +34,34 @@ class EventController extends Controller
      */
     public function store(StoreeventRequest $request)
     {
+        Session::flash('name', $request->name);
+        Session::flash('uraian', $request->uraian);
+        Session::flash('tujuan', $request->tujuan);
+        Session::flash('tanggar', $request->tanggar);
+        Session::flash('waktu', $request->waktu);
+
+
+
         $request->validate([
-            'name' => 'required',
-            'uraian' => 'required',
-            'tujuan' => 'required',
-            'tanggal' => 'required|date',
-            'waktu' => 'required|date_format:H:i',
+            'name'=>'required',
+            'uraian'=>'required',
+            'tujuan'=>'required',
+            'tanggal'=>'required',
+            'waktu'=>'required',
         ]);
+        $data = [
+            'name' =>$request->name,
+            'uraian' =>$request->uraian,
+            'tujuan' =>$request->tujuan,
+            'tanggal' =>$request->tanggal,
+            'waktu' =>$request->waktu,
+        ];
+        // dd($data);
+        event::create($data);
+        return redirect()->to('event')->with('success','New event added successfully');
 
-        Event::create($request->all());
 
-        return redirect()->route('event.index')
-        ->with('success', 'Event created successfully.');
+       
     }
 
     /**
@@ -55,14 +69,16 @@ class EventController extends Controller
      */
     public function show(event $event)
     {
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(event $event)
+    public function edit(event $id)
     {
-        //
+        $data = event::where('id',$id)->first();
+        return view('event.edit')->with('data',$data);
     }
 
     /**
