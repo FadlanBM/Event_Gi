@@ -11,7 +11,7 @@
 
             </div>
         </div>
-        <div class="w-full h-[0.5px] bg-[#CFCFD1] mt-[12px]"></div>
+        <div class="w-full h-[1px] bg-[#CFCFD1] mt-[12px]"></div>
 
         {{-- Member Section --}}
         <div class="py-[16px]">
@@ -84,7 +84,7 @@
             </div>
         </div>
         {{-- Chat Section --}}
-        <div>
+        <div class="py-2">
             {{-- Title --}}
             <div class="flex justify-between">
                 <div class="flex justify-start">
@@ -104,8 +104,34 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full h-[0.5px] bg-[#CFCFD1] mt-[12px]"></div>
+            <div class="w-full h-[1px] bg-[#CFCFD1] mt-[12px]"></div>
 
+            <div>
+                <div class="py-4 flex flex-col gap-y-2">
+                    <div class="flex items-center gap-x-2">
+                        <img class="rounded-[4px]" src="/assets/helenmentariavatar.png" />
+                        <p class="text-xs text-black">Helen Mentari</p>
+                        <p class="text-[8px]">10:12 AM</p>
+                    </div>
+
+                    <div class="w-[173px] h-8 bg-[#E14817] flex justify-center items-center rounded-bl-[8px] rounded-br-[8px] rounded-tr-[8px] ">
+                        <p class="text-xs text-white font-normal">Guys, what do you want?</p>
+                    </div>
+
+                    <div class="w-[115px] h-8 bg-[#E14817] flex justify-center items-center rounded-[8px]">
+                        <p class="text-xs text-white font-normal">Can I help you?</p>
+                    </div>
+
+                    <div class="mt-2 w-[212px] h-[40px] border-[1px] rounded-[100px] flex justify-between items-center px-3 border-[#CFCFD1]">
+                        <p class="text-xs">Message...</p>
+                        <div class="flex justify-end">
+                            <div class="w-6 h-6 rounded-full bg-[#E14817] flex items-center justify-center">
+                                <img src="/assets/icon-send.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

@@ -71,7 +71,11 @@
     </div>
 
     <div class="bg-white w-full h-[1066px]">
-        <div class="flex gap-x-4">
+        <div class="flex justify-center flex-col py-[100px] gap-y-4">
+            <h1 class="text-black text-[40px] font-semibold text-center leading-snug">Powerful virtual conferencing<br>platform solution</h1>
+            <p class="text-[20px] text-center text-[#57585D]">Dedicated spaces that make it easy to come together.</p>
+        </div>
+        <div class="flex gap-x-4 justify-center">
             @include('components.natasha-sunny')
             <div class="flex flex-col gap-y-4">
                 @include('components.sunny-marwah')
