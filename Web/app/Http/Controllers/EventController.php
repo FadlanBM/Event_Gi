@@ -75,7 +75,7 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(event $id)
+    public function edit($id)
     {
         $data = event::where('id',$id)->first();
         return view('event.edit')->with('data',$data);
@@ -84,16 +84,33 @@ class EventController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateeventRequest $request, event $event)
+    public function update(UpdateeventRequest $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'uraian'=>'required',
+            'tujuan'=>'required',
+            'tanggal'=>'required',
+            'waktu'=>'required',
+        ]);
+        $data = [
+            'name' =>$request->name,
+            'uraian' =>$request->uraian,
+            'tujuan' =>$request->tujuan,
+            'tanggal' =>$request->tanggal,
+            'waktu' =>$request->waktu,
+        ];
+        // dd($data);
+        event::where('id', $id)->update($data);
+        return redirect()->to('event')->with('success','Edit event success');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(event $event)
+    public function destroy($id)
     {
-        //
+        event::where('id',$id)->delete();
+        return redirect()->to('event')->with('success', 'data deleted succesfully');
     }
 }

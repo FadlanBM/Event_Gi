@@ -26,8 +26,12 @@
             <td>{{$item->tanggal}}</td>
             <td>{{$item->waktu}}</td>
             <td>
-              <a href='{{url('event/'.$item->id.'/edit')}}' class="badge bg-warning">Edit</a>
-              <a href="" class="badge bg-danger">Del</a>
+              <a href='{{url('event/'.$item->id.'/edit')}}' class="btn btn-warning">Edit</a>
+              <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' action="{{ url('event/'.$item->id) }}" method="post">
+                @csrf 
+                @method('DELETE')
+                <button type="submit" name="submit" class="btn btn-danger btn-sm">Del</button>
+            </form>
             </td>
           </tr>
          @endforeach

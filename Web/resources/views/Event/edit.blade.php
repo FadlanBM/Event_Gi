@@ -3,8 +3,10 @@
 
 
 
-<form action='{{ url('event') }}' method="post">
+<form action='{{ url('event/'.$data->id) }}' method="post">
     @csrf
+    @method('PUT')
+
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
       <input type="text" class="form-control" value="{{ $data->name }}" id="name" name="name">
