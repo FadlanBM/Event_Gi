@@ -22,19 +22,28 @@
             <dialog id="my_modal_3" class="modal">
                 <form method="dialog" class="modal-box">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                    <h3 class="font-bold text-lg">Hello!</h3>
-                    <form action="">
-                        <label for="">Nama</label><br>
-                        <input type="text" name="" id=""><br>
-                        <label for="">Uraian</label><br>
-                        <input type="text" name="" id=""><br>
-                        <label for="">Tujuan</label><br>
-                        <input type="text" name="" id=""><br>
-                        <label for="">Tanggal</label><br>
-                        <input type="date" name="" id=""><br>
-                        <label for="">Waktu</label><br>
-                        <input type="time" name="" id=""><br>
-                    </form>
+                    <h3 class="font-bold text-black text-lg">Hello!</h3>
+                    <div class="flex px-8">
+                        <div>
+                            <form action="">
+                                <label for="">Nama</label><br>
+                                <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
+                                <label for="">Uraian</label><br>
+                                <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
+                                <label for="">Tujuan</label><br>
+                                <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
+                                <label for="">Tanggal</label><br>
+                                <input class="mt-2 w-[20rem] rounded-lg" type="date" name="" id=""><br><br>
+                                <label for="">Waktu</label><br>
+                                <input class="mt-2 w-[20rem] rounded-lg" type="time" name="" id=""><br>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                        
+                        <div class="flex items-center justify-center">
+                            <img class="w-[80%]" src="/assets/form.png" alt="">
+                        </div>
+                    </div>
                 </form>
             </dialog>
         </div>
