@@ -18,12 +18,12 @@
                 product , create opportunity
             </p>
             <!-- You can open the modal using ID.showModal() method -->
-            <button class="bg-[#E14817] h-[50px] w-[150px] text-white rounded-lg mt-8" onclick="my_modal_3.showModal()">Join Meeting</button>
+            <button class="bg-[#E14817] h-[50px] w-[150px] text-white rounded-lg mt-8 hover:bg-[#b33910]" onclick="my_modal_3.showModal()">Join Meeting</button>
             <dialog id="my_modal_3" class="modal">
                 <form method="dialog" class="modal-box">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     <h3 class="font-bold text-black text-lg">Hello!</h3>
-                    <div class="flex px-8">
+                    <div class="flex">
                         <div>
                             <form action="">
                                 <label for="">Nama</label><br>
@@ -36,7 +36,7 @@
                                 <input class="mt-2 w-[20rem] rounded-lg" type="date" name="" id=""><br><br>
                                 <label for="">Waktu</label><br>
                                 <input class="mt-2 w-[20rem] rounded-lg" type="time" name="" id=""><br>
-                                <input type="submit" value="Submit">
+                                <input class="mt-7" type="submit" value="Submit">
                             </form>
                         </div>
                         
@@ -93,5 +93,9 @@
             </div>
             @include('components.chat-box')
         </div>
+    </div>
+
+    <div>
+
     </div>
 @endsection
