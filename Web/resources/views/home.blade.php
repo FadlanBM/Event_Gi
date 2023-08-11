@@ -23,11 +23,16 @@
                 <form method="dialog" class="modal-box">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     <h3 class="font-bold text-black text-lg">Hello!</h3>
-                    <div class="flex">
+                    <div class="flex justify-between">
                         <div>
                             <form action="">
                                 <label for="">Nama</label><br>
                                 <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
+                                <label for="">Agenda</label><br>
+                                <select class="mt-2 rounded-lg" name="" id="">
+                                    <option value="">Meeting</option>
+                                    <option value="">Seminar</option>
+                                </select><br><br>
                                 <label for="">Uraian</label><br>
                                 <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
                                 <label for="">Tujuan</label><br>
@@ -41,7 +46,7 @@
                         </div>
                         
                         <div class="flex items-center justify-center">
-                            <img class="w-[80%]" src="/assets/form.png" alt="">
+                            <img class="w-[30rem]" src="/assets/form.png" alt="">
                         </div>
                     </div>
                 </form>

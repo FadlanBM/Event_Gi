@@ -4,13 +4,17 @@
 
 @layer components {
     .modal-box {
-        max-width: 65%;
-        padding: 4rem 9rem;
+        max-width: 80%;
+        padding: 3rem 4rem;
         background-color: white;
     }
 
     label {
         color: black;
+    }
+
+    select {
+        padding-right: 15rem;
     }
 
     [type="text"]:focus, 
