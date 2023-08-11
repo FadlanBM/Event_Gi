@@ -28,7 +28,7 @@
             <td>
               <a href='{{url('event/'.$item->id.'/edit')}}' class="btn btn-warning">Edit</a>
               <form onsubmit="return confirm('Are you sure want to delete this data?')" class='d-inline' action="{{ url('event/'.$item->id) }}" method="post">
-                @csrf 
+                @csrf
                 @method('DELETE')
                 <button type="submit" name="submit" class="btn btn-danger">Del</button>
             </form>
