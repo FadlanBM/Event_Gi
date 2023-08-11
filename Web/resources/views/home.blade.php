@@ -23,7 +23,7 @@
                 <form method="dialog" class="modal-box">
                     <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     <h3 class="font-bold text-black text-lg">Hello!</h3>
-                    <div class="flex justify-between">
+                    <div class="flex">
                         <div>
                             <form action="">
                                 <label for="">Nama</label><br>
