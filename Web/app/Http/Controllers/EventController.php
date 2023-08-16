@@ -37,7 +37,7 @@ class EventController extends Controller
         Session::flash('name', $request->name);
         Session::flash('uraian', $request->uraian);
         Session::flash('tujuan', $request->tujuan);
-        Session::flash('tanggar', $request->tanggar);
+        Session::flash('tanggal', $request->tanggal);
         Session::flash('waktu', $request->waktu);
 
 
