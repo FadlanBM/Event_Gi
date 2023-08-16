@@ -23,14 +23,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-<<<<<<< Updated upstream
 Route::get('/join', function () {
     return view('join');
 });
-=======
-//user management
-
->>>>>>> Stashed changes
 
 
 //event
