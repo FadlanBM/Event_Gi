@@ -13,7 +13,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="bg-white">
 
     @yield('content')
 

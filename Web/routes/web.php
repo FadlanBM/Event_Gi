@@ -23,11 +23,14 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-
+Route::get('/join', function () {
+    return view('join');
+});
 
 Route::get('/admin', function () {
     return view('admin');
 })->middleware(['auth', 'verified'])->name('admin');
+
 Route::resource('/event', EventController::class)->middleware(['auth','verified']);
 // Route::get('/event',[EventController::class,'index'])->middleware(['auth', 'verified'])->name('event');
 // Route::post('/event/post',[EventController::class,'store'])->middleware(['auth', 'verified'])->name('event');
