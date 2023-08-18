@@ -18,39 +18,7 @@
                 product , create opportunity
             </p>
             <!-- You can open the modal using ID.showModal() method -->
-            <button class="bg-[#E14817] h-[50px] w-[150px] text-white rounded-lg mt-8 hover:bg-[#b33910]" onclick="my_modal_3.showModal()">Join Meeting</button>
-            <dialog id="my_modal_3" class="modal">
-                <form method="dialog" class="modal-box">
-                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                    <h3 class="font-bold text-black text-lg">Hello!</h3>
-                    <div class="flex">
-                        <div>
-                            <form action="">
-                                <label for="">Nama</label><br>
-                                <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
-                                <label for="">Agenda</label><br>
-                                <select class="mt-2 rounded-lg" name="" id="">
-                                    <option value="">Meeting</option>
-                                    <option value="">Seminar</option>
-                                </select><br><br>
-                                <label for="">Uraian</label><br>
-                                <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
-                                <label for="">Tujuan</label><br>
-                                <input class="mt-2 rounded-lg" type="text" name="" id=""><br><br>
-                                <label for="">Tanggal</label><br>
-                                <input class="mt-2 w-[20rem] rounded-lg" type="date" name="" id=""><br><br>
-                                <label for="">Waktu</label><br>
-                                <input class="mt-2 w-[20rem] rounded-lg" type="time" name="" id=""><br>
-                                <input class="mt-7" type="submit" value="Submit">
-                            </form>
-                        </div>
-                        
-                        <div class="flex items-center justify-center">
-                            <img class="w-[30rem]" src="/assets/form.png" alt="">
-                        </div>
-                    </div>
-                </form>
-            </dialog>
+            <button class="bg-[#E14817] h-[50px] w-[150px] text-white rounded-lg mt-8 hover:bg-[#b33910]" onclick="join()">Join Meeting</button>
         </div>
 
         <div>
@@ -100,7 +68,22 @@
         </div>
     </div>
 
-    <div>
+    <div class="bg-[#0F1017] w-full h-screen">
+        <div class="flex justify-between gap-6 px-[5rem] py-[5rem]">
+            <div>
+                <h1 class="font-semibold text-white text-[3rem] tracking-wide">Experience<br>you can trust</h1>
+            </div>
+            <div class="w-1/2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
 
     </div>
+
+    <script>
+        function join() {
+            window.location.href="/join";
+        }
+    </script>
+
 @endsection
