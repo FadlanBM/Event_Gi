@@ -23,23 +23,17 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-<<<<<<< Updated upstream
 Route::get('/join', function () {
     return view('join');
 });
-=======
-//user management
 
->>>>>>> Stashed changes
-
-
-//event
 Route::get('/admin', function () {
     return view('admin');
 })->middleware(['auth', 'verified'])->name('admin');
 
 Route::resource('/event', EventController::class)->middleware(['auth','verified']);
-
+// Route::get('/event',[EventController::class,'index'])->middleware(['auth', 'verified'])->name('event');
+// Route::post('/event/post',[EventController::class,'store'])->middleware(['auth', 'verified'])->name('event');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
