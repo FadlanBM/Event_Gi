@@ -27,6 +27,8 @@ Route::get('/join', function () {
     return view('join');
 });
 
+
+//event
 Route::get('/admin', function () {
     return view('admin');
 })->middleware(['auth', 'verified'])->name('admin');
